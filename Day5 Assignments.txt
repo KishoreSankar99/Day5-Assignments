@@ -1,0 +1,376 @@
+                                                                            Day-5 Assignments
+
+1) Complete given programs with Anonymus functions
+
+i)
+
+//Print odd numbers in the array
+
+let temp = [];
+let ano = function(arr){
+    
+    for(let i = 0;i<arr.length;i++){
+        if(arr[i]%2!==0)
+        {
+            temp.push(arr[i])
+        }
+    }
+     return temp
+}
+let arr = [1,2,3,4,5,6,7,8,9,10]
+console.log(ano(arr).join(" "))
+----------------------------------------------------------
+
+//Convert all string to capital letters in the array using Anonymus functions
+
+ii)
+
+let temp = [];
+let wd='';
+let ano = function(arr){
+    //console.log(arr)
+    
+    for(let i = 0;i<arr.length;i++){
+        wd = arr[i].toUpperCase()
+        temp.push(wd)
+        
+    }
+     return temp
+}
+let arr = ['kishore','sam','ram','harish'];
+console.log(ano(arr))
+----------------------------------------------------------
+
+iii)
+
+//Sum of the array using Anonymus functions
+
+let temp = [];
+let wd=0;
+let ano = function(arr){
+    //console.log(arr)
+    
+    for(let i = 0;i<arr.length;i++){
+        wd=wd+arr[i]
+        
+    }
+     return wd
+}
+let arr = [1,2,3,4,5,6,7,8,9];
+console.log(ano(arr))
+
+----------------------------------------------------------
+
+iv)
+
+//Return all palindrome in the array using Anonymus functions
+
+let temp = [];
+let wd='';
+let ano = function(arr){
+    //console.log(arr)
+    
+    for(let i = 0;i<arr.length;i++){
+        //console.log(arr[i])
+        //console.log(arr[i].split("").reverse().join(""))
+        
+        if(arr[i]===arr[i].split("").reverse().join("")){
+            temp.push(arr[i])
+        }
+        
+        
+    }
+     return temp
+}
+let arr = ['madam','sam','omo'];
+console.log(ano(arr))
+
+-----------------------------------------------------------
+
+V)
+
+//Find prime numbers in the array using Anonymus function
+
+let temp = [];
+let fg = 0
+let ary = [1,2,3,4,5,6,7,8,9,10]
+let fn = function(ary){
+
+for(let i = 0;i<ary.length;i++){
+    if(i===0){continue;}
+    for(let j = 2;j<=ary[i];j++){
+        if(ary[i]%j===0){
+            fg = fg + 1
+        }
+        
+    }
+    if(fg<=1){
+        temp.push(ary[i])
+    }
+    fg = 0
+}
+return temp.join(" ")
+}
+console.log(fn(ary))
+
+-----------------------------------------------
+
+iv)
+
+//Remove duplicates from the array using the anonymus function method
+
+let ary = [1,2,3,6,3,2];
+let ref = []
+let fn = function(ary){
+for(let i = 0 ;i<ary.length;i++)
+{
+    if(ref.indexOf(ary[i])===-1){
+        ref.push(ary[i])
+    }
+}
+return ref
+}
+console.log(fn(ary))
+
+=======================================================================================================================================================================
+2) Complete the given functions using Arrow functions
+
+i)
+
+//Print odd numbers in the array using Arrow function
+
+let temp = [];
+let ano =(arr)=>{
+    
+    for(let i = 0;i<arr.length;i++){
+        if(arr[i]%2!==0)
+        {
+            temp.push(arr[i])
+        }
+    }
+     return temp
+}
+let arr = [1,2,3,4,5,6,7,8,9,10]
+console.log(ano(arr).join(" "))
+----------------------------------------------------------
+
+ii)
+
+//Convert all string to capital letters in the array using Arrow functions
+
+let temp = [];
+let wd='';
+let ano =(arr)=>{
+    //console.log(arr)
+    
+    for(let i = 0;i<arr.length;i++){
+        wd = arr[i].toUpperCase()
+        temp.push(wd)
+        
+    }
+     return temp
+}
+let arr = ['kishore','sam','ram','harish'];
+console.log(ano(arr))
+
+-------------------------------------------------------------- 
+
+iii)
+
+//Sum of the array using Arrow functions
+
+let temp = [];
+let wd=0;
+let ano =(arr)=>{
+    //console.log(arr)
+    
+    for(let i = 0;i<arr.length;i++){
+        wd=wd+arr[i]
+        
+    }
+     return wd
+}
+let arr = [1,2,3,4,5,6,7,8,9];
+console.log(ano(arr))
+
+--------------------------------------------------------------
+
+iv)
+
+//Return all palindrome in the array using Arrow functions
+
+let temp = [];
+let wd='';
+let ano =(arr)=>{
+    //console.log(arr)
+    
+    for(let i = 0;i<arr.length;i++){
+        //console.log(arr[i])
+        //console.log(arr[i].split("").reverse().join(""))
+        
+        if(arr[i]===arr[i].split("").reverse().join("")){
+            temp.push(arr[i])
+        }
+        
+        
+    }
+     return temp
+}
+let arr = ['madam','sam','omo'];
+console.log(ano(arr))
+
+-------------------------------------------------------------
+
+v)
+
+//Find prime numbers in the array using Arrow function
+
+let temp = [];
+let fg = 0
+let ary = [1,2,3,4,5,6,7,8,9,10]
+let fn =(ary)=>{
+
+for(let i = 0;i<ary.length;i++){
+    if(i===0){continue;}
+    for(let j = 2;j<=ary[i];j++){
+        if(ary[i]%j===0){
+            fg = fg + 1
+        }
+        
+    }
+    if(fg<=1){
+        temp.push(ary[i])
+    }
+    fg = 0
+}
+return temp.join(" ")
+}
+console.log(fn(ary))
+
+========================================================================================================================================================================
+ 
+3)
+i)
+//Write a function to return +5 to the value
+
+var num = 5;
+function addFive(num) { 
+    return 5 + num
+
+}
+var result = addFive(num)
+console.log(result)
+------------------------------------------------------
+
+ii)
+//Convert minutes into seconds
+
+var min = 5;
+function toSeconds(min) {
+    return min*60
+}
+var secs = toSeconds(min)
+console.log(secs)
+-------------------------------------------------------
+iii)
+
+//Convert string into number
+
+var mystr = "5";
+function toInteger(mystr) {
+    return +mystr
+}
+var myint = toInteger(mystr)
+console.log(myint)
+------------------------------------------------------
+
+iv)
+
+//Add +1 to the input
+
+var myint = 1;
+function nextNumber(myint) {
+    return myint + 1
+}
+var myNextint = nextNumber(myint)
+console.log(myNextint)
+-----------------------------------------------------
+
+v)
+
+//Print first element of the array
+
+var arr = [100, 2, 3];
+function getFirstElement(arr) {
+    return arr[0]
+}
+var data = getFirstElement(arr)
+console.log(data)
+
+------------------------------------------------------
+
+vi)
+
+//Convert hours into seconds
+
+var arr = 2;
+function hourToSeconds(arr) {
+    return arr*3600
+}
+var data = hourToSeconds(arr)
+console.log(data)
+--------------------------------------------------------
+
+vii)
+
+//Perimeter of the rectangle
+
+function findPerimeter(num1,num2) {
+    return 2*(num1+num2)
+}
+var peri = findPerimeter(6,7)
+console.log(peri)
+
+--------------------------------------------------------
+
+viii)
+
+//if sum<100 true and false if sum>100
+
+function lessThan100(num1,num2) {
+    return num1+num2<100 ? true : false;
+}
+var res = lessThan100(22,15)
+console.log(res)
+
+-------------------------------------------------------
+
+xi)
+
+//Finding the reminder
+
+function remainder(num1,num2) {
+    return num1%num2
+}
+var res = remainder(-9,45)
+console.log(res)
+
+------------------------------------------------------
+
+x)
+
+//Counting legs
+
+function CountAnimals(tur,horse,pigs) {
+    return 2*tur + 4*horse + 4*pigs
+}
+var legs = CountAnimals(2,3,5)
+console.log(legs)
+
+
+
+********************************************************************************END***********************************************************************************
+
+
+
+
